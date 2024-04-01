@@ -13,7 +13,9 @@
 _A DEV db is enough to use the app in the development environment._
 
 • in the terminal, `cd` to the project folder, then run:
-	`npm run start-db` (this will run `mongod`, and only needs to be run once, not at every import attempt)
+`npm install` to install the node packages
+
+• run `npm run start-db` (this will run `mongod`, and only needs to be run once, not at every import attempt)
 
 • to start a data import, run: 
 `npm start "<path/to/file.xlsx>"` 
