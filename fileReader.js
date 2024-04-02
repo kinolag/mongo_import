@@ -1,8 +1,8 @@
 import * as XLSX from "xlsx/xlsx.mjs";
 import { Track, Contract } from "./models.js";
-
 /* load 'fs' for readFile (and writeFile) support */
 import * as fs from "fs";
+
 XLSX.set_fs(fs);
 
 const getContractId = async (contractName) => {
@@ -10,9 +10,10 @@ const getContractId = async (contractName) => {
     const c = await Contract.findOne({ Name: contractName });
     if (c?._id) {
       return c?._id;
-    } else throw new Error(`a contract named '${contractName}' cannot be found.`);
+    } else
+      throw new Error(`a contract named '${contractName}' cannot be found.`);
   } catch (error) {
-     console.log(error);
+    console.log(error);
   }
 };
 
@@ -55,8 +56,6 @@ const readFile = async (filePath) => {
           `An error occurred while processing the data for import, or checking contract IDs: ${error}`
         )
       );
-
-    // console.log("processed:", data);
 
     /* make tracks from data */
     const tracks = data.map((d) => new Track(d));
