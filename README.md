@@ -1,4 +1,4 @@
-# mongo_import | a node app to import tracks from an xlsx file into MongoDB using mongoose
+# mongo_import: a node app to import data from an xlsx file into MongoDB using mongoose
 
 ## How to use the app:
 
