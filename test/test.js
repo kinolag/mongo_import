@@ -29,7 +29,7 @@ describe("* Reading file, importing and deleting tracks *", function () {
 
     it("Existing contract name should return an ObjectId", async function () {
       const contractName = "Test Contract";
-      Contract.create(new Contract({ Name: contractName }));
+      await Contract.create(new Contract({ Name: contractName }));
       const contractId = await getContractId(contractName);
       assert.equal(contractId.constructor.name, "ObjectId");
       // clean up
