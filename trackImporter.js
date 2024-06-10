@@ -30,7 +30,7 @@ const importTracks = async (filePath) => {
     /* on error, we want to continue importing the other tracks */
     const res = await Track.insertMany(tracks, {
       ordered: false, // make import continue on error
-      throwOnValidationError: true, // make mongoose throw error
+      throwOnValidationError: true, // make mongoose throw error - if one of the operations failed validation, but all valid operations completed successfully.
     });
     console.log(res?.length || "No", "tracks were successfully imported.");
   } catch (error) {
