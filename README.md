@@ -23,7 +23,7 @@ _A DEV db is enough to use the app in the development environment._
 e.g. `npm start "./data/Test_Import.xlsx"`
 
 • two xlsx files are included in the /data folder:
-`Test_Import.xlsx` and `Track_Import_8.xlsx`
+`Test_Import.xlsx` and `Tracks_Import_8.xlsx`
 
 you can use these or you can import a different file on your system (by passing its path when calling the process).
 
